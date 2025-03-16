@@ -1,0 +1,141 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fix the navbar at the top */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Resize the logo */
+#header-img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+}
+
+/* Style the navigation bar */
+#nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#nav-bar li {
+  display: inline;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+#nav-bar a:hover {
+  color: #007BFF;
+}
+
+/* Ensure the content does not overlap with the navbar */
+body {
+  padding-top: 80px; 
+}
+
+/* Fix section scrolling issue */
+section {
+  scroll-margin-top: 80px;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Features Section Styling */
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.feature {
+  width: 250px;
+  text-align: center;
+}
+
+.feature img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Style the video section */
+#video {
+  width: 100%;
+  max-width: 560px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Style the form */
+#form {
+  margin-top: 20px;
+}
+
+#email {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#submit {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-bar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
