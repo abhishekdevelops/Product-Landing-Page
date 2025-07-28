@@ -1,141 +1,202 @@
-/* Reset default styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* Fix the navbar at the top */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Header */
 #header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background: white;
+  background: #fff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding: 12px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
 
-/* Resize the logo */
 #header-img {
-  max-width: 120px;
-  height: auto;
-  display: block;
+  width: 120px;
 }
 
-/* Style the navigation bar */
 #nav-bar ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 
-#nav-bar li {
-  display: inline;
-}
-
-#nav-bar a {
+.nav-link {
   text-decoration: none;
-  font-size: 18px;
   color: #333;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  font-weight: 500;
 }
 
-#nav-bar a:hover {
-  color: #007BFF;
+.nav-link:hover {
+  color: #2575fc;
 }
 
-/* Ensure the content does not overlap with the navbar */
-body {
-  padding-top: 80px; 
-}
-
-/* Fix section scrolling issue */
-section {
-  scroll-margin-top: 80px;
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: 0 auto;
+/* Hero Section */
+#hero {
+  margin-top: 80px;
+  padding: 100px 20px;
   text-align: center;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
 }
 
-/* Features Section Styling */
+.cta-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #fff;
+  color: #2575fc;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #e0e0e0;
+}
+
+/* Features */
+#features {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
 .features-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .feature {
-  width: 250px;
+  max-width: 280px;
   text-align: center;
+  padding: 20px;
 }
 
 .feature img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+  width: 80px;
+  margin-bottom: 15px;
 }
 
-/* Style the video section */
+.feature:hover {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+/* Video Section */
+#video-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
 #video {
-  width: 100%;
-  max-width: 560px;
-  display: block;
-  margin: 20px auto;
+  max-width: 100%;
 }
 
-/* Style the form */
+/* Pricing */
+#pricing {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.pricing-card {
+  max-width: 280px;
+  background: #fefefe;
+  padding: 30px 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.recommended {
+  border: 2px solid #2575fc;
+}
+
+/* Contact Form */
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+  background: #2c3e50;
+  color: white;
+}
+
 #form {
   margin-top: 20px;
 }
 
 #email {
-  width: 100%;
-  max-width: 300px;
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+  width: 250px;
+  border: none;
   border-radius: 5px;
-  margin-bottom: 10px;
 }
 
 #submit {
   padding: 10px 20px;
-  font-size: 16px;
+  background: #2575fc;
   color: white;
-  background-color: #007BFF;
   border: none;
   border-radius: 5px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
 #submit:hover {
-  background-color: #0056b3;
+  background: #1d5fcf;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  #header {
-    flex-direction: column;
-    text-align: center;
-  }
-
   #nav-bar ul {
     flex-direction: column;
     gap: 10px;
   }
 
-  .features-container {
+  .features-container,
+  .pricing-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  #header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  #header-img {
+    width: 100px;
   }
 }

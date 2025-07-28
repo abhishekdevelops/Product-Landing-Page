@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-   <!-- Header Section -->
-   <header id="header">
-      <img id="header-img" src="https://i.postimg.cc/K8cg3QrR/logo.jpg" alt="AI Chatbot Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chatbot Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header id="header">
+      <img
+        id="header-img"
+        src="https://i.postimg.cc/K8cg3QrR/logo.jpg"
+        alt="AI Chatbot Logo"
+      />
       <nav id="nav-bar">
         <ul>
           <li><a class="nav-link" href="#features">Features</a></li>
@@ -18,43 +21,68 @@
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
-   </header>
+    </header>
 
-   <!-- Features Section -->
-   <section id="features">
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Meet Your Smartest Chatbot Assistant</h1>
+      <p>Automate customer support with next-gen AI.</p>
+      <a href="#pricing" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
       <h2>Why Choose Our AI Chatbot?</h2>
       <div class="features-container">
         <div class="feature">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055649.png" alt="AI Icon">
-          <p><strong>AI-Powered Conversations</strong> – Our chatbot understands and responds intelligently.</p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1055/1055649.png"
+            alt="AI Icon"
+          />
+          <p>
+            <strong>AI-Powered Conversations</strong> – Understands and responds
+            intelligently.
+          </p>
         </div>
         <div class="feature">
-          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Support Icon">
-          <p><strong>24/7 Customer Support</strong> – Never miss a customer inquiry, day or night.</p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+            alt="Support Icon"
+          />
+          <p>
+            <strong>24/7 Customer Support</strong> – Always available, day or
+            night.
+          </p>
         </div>
         <div class="feature">
-          <img src="https://cdn-icons-png.flaticon.com/512/875/875286.png" alt="Integration Icon">
-          <p><strong>Seamless Integration</strong> – Easily connect with your website or app.</p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/875/875286.png"
+            alt="Integration Icon"
+          />
+          <p>
+            <strong>Seamless Integration</strong> – Connect with your website or
+            app easily.
+          </p>
         </div>
       </div>
-   </section>
+    </section>
 
-   <!-- Video Section -->
-   <section id="video-section">
+    <!-- Video Section -->
+    <section id="video-section">
       <h2>Watch AI Chatbot in Action</h2>
-      <iframe 
-         id="video" 
-         width="560" 
-         height="315" 
-         src="https://www.youtube.com/embed/MTmf5VtflpM" 
-         frameborder="0" 
-         allowfullscreen
-         title="AI Chatbot Demo Video">
-      </iframe>
-   </section>
+      <iframe
+        id="video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/MTmf5VtflpM"
+        frameborder="0"
+        allowfullscreen
+        title="AI Chatbot Demo Video"
+      ></iframe>
+    </section>
 
-   <!-- Pricing Section -->
-   <section id="pricing">
+    <!-- Pricing Section -->
+    <section id="pricing">
       <h2>Flexible Pricing Plans</h2>
       <div class="pricing-container">
         <div class="pricing-card">
@@ -64,26 +92,39 @@
           <p>✔ Email Support</p>
         </div>
 
-        <div class="pricing-card">
+        <div class="pricing-card recommended">
           <h3>Pro Plan</h3>
           <p><strong>$30/month</strong></p>
           <p>✔ Everything in Basic</p>
           <p>✔ Priority Support</p>
           <p>✔ API Access</p>
         </div>
-      </div>
-   </section>
 
-   <!-- Contact Section -->
-   <section id="contact">
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p><strong>$99/month</strong></p>
+          <p>✔ Everything in Pro</p>
+          <p>✔ Dedicated Chatbot Assistant</p>
+          <p>✔ Custom Integrations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Form Section -->
+    <!-- Contact / Form Section -->
+    <section id="contact">
       <h2>Stay Connected</h2>
       <p>Sign up to receive updates and AI chatbot insights.</p>
       <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <label for="email" class="sr-only">Email Address</label>
-        <input id="email" type="email" name="email" placeholder="Enter your email" required>
-        <input id="submit" type="submit" value="Sign Up">
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <input id="submit" type="submit" value="Sign Up" />
       </form>
-   </section>
-
-</body>
+    </section>
+  </body>
 </html>
