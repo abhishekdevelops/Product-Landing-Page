@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Header */
+/* Header / Navbar */
 #header {
   position: fixed;
   top: 0;
@@ -48,11 +48,28 @@ body {
 
 /* Hero Section */
 #hero {
-  margin-top: 80px;
-  padding: 100px 20px;
+  margin-top: 90px; /* Default spacing for desktop */
+  padding: 100px 20px 60px;
   text-align: center;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
+}
+
+/* Responsive: fix overlap on mobile stacked navbar */
+@media (max-width: 768px) {
+  #hero {
+    margin-top: 200px; /* Increased top margin for mobile navbar height */
+  }
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+#hero p {
+  font-size: 1.2rem;
 }
 
 .cta-button {
@@ -144,7 +161,7 @@ body {
   border: 2px solid #2575fc;
 }
 
-/* Contact Form */
+/* Contact Section */
 #contact {
   padding: 60px 20px;
   text-align: center;
@@ -179,24 +196,33 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
   #nav-bar ul {
     flex-direction: column;
     gap: 10px;
+  }
+
+  #header-img {
+    width: 100px;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
   }
 
   .features-container,
   .pricing-container {
     flex-direction: column;
     align-items: center;
-  }
-
-  #header {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 20px;
-  }
-
-  #header-img {
-    width: 100px;
   }
 }
